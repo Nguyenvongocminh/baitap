@@ -43,7 +43,7 @@ const BAITAP = () => {
       <input
         type="date"
         {...register("test", {
-          valueAsDate: true,
+          valueAsDate: false,
         })}
       />
 
@@ -54,6 +54,7 @@ const BAITAP = () => {
         {...register("Mobile number", {
           required: true,
           minLength: 6,
+          value: false,
           maxLength: 12,
         })}
       />
@@ -69,6 +70,7 @@ const BAITAP = () => {
           pattern: /^\S+@\S+$/i,
         })}
       />
+      {errors?.Email?.type === "pattern" && <p>Email invalidate</p>}
       <label>Password</label>
       <input
         type="password"
