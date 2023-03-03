@@ -37,7 +37,6 @@ const BAITAP = () => {
       {errors?.name?.type === "minLength" && (
         <p> name cannot exceed 3 characters</p>
       )}
-      {errors?.name?.type === "pattern" && <p>Alphabetical characters only</p>}
 
       <label>Ngày Sinh</label>
       <input
