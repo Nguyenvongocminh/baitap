@@ -67,7 +67,7 @@ const BAITAP = () => {
           max: 20,
           min: 5,
           maxLength: 30,
-          pattern: /^\S+@\S+$/i,
+          pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
         })}
       />
       {errors?.Email?.type === "pattern" && <p>Email invalidate</p>}
